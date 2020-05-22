@@ -30,7 +30,7 @@ def get_english_meaning(file_name, japanese_face)
   final_hash = load_library(file_name)
   final_hash.each do |name, faces_hash|
     binding.p
-    final_hash[name].each do |language, face|
+    final_hash[faces_hash].each do |language, face|
       if face = japanese_face
         return name
       end
