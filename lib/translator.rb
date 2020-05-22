@@ -1,5 +1,5 @@
 # require modules here
-#require 'pry'
+require 'pry'
 def load_library(file_name)
   require 'yaml'
   final_hash= {}
@@ -23,9 +23,17 @@ def load_library(file_name)
 end
 
 def get_japanese_emoticon
-  # code goes here
+  
 end
 
-def get_english_meaning
-  # code goes here
+def get_english_meaning(file_name, japanese_face)
+  final_hash = load_library(file_name)
+  final_hash.each do |name, faces_hash|
+    binding.p
+    final_hash[name].each do |language, face|
+      if face = japanese_face
+        return name
+      end
+    end
+  end
 end
