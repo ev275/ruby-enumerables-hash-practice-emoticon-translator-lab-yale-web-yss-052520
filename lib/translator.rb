@@ -1,5 +1,5 @@
 # require modules here
-#require 'pry'
+require 'pry'
 def load_library(file_name)
   require 'yaml'
   final_hash= {}
