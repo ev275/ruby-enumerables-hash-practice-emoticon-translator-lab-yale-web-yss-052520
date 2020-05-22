@@ -1,5 +1,5 @@
 # require modules here
-require 'pry'
+#require 'pry'
 def load_library(file_name)
   require 'yaml'
   final_hash= {}
@@ -32,7 +32,6 @@ def get_english_meaning(file_name, japanese_face)
     #binding.pry
     final_hash[faces_hash].each do |language, face|
       if face = japanese_face
-        binding.pry
         return name
       end
     end
